@@ -3,6 +3,7 @@
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,16 +41,18 @@
                                     <constraint firstAttribute="height" constant="120" id="eiO-Th-uIS"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7KT-0W-gae">
-                                <rect key="frame" x="90" y="607" width="213" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="tintColor"/>
-                                <buttonConfiguration key="configuration" style="plain" title="START">
-                                    <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="36"/>
-                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                </buttonConfiguration>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAH-k5-ork">
+                                <rect key="frame" x="140" y="789" width="150" height="40"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3gb-e1-apx"/>
+                                    <constraint firstAttribute="width" constant="150" id="L6k-ic-DqI"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="START"/>
                                 <connections>
-                                    <action selector="startbuttonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="FDb-DO-GCx"/>
+                                    <action selector="startbuttonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="aQp-JD-uoU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -60,24 +63,29 @@
                             <constraint firstItem="OTb-iD-LLh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PCA-ae-mYS"/>
                             <constraint firstItem="HdW-Cm-4DE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TcK-LQ-UPM"/>
                             <constraint firstItem="84B-qy-e76" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WcR-6H-PSk"/>
+                            <constraint firstItem="xAH-k5-ork" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fxn-s9-Ayg"/>
                             <constraint firstItem="OTb-iD-LLh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="93" id="pZR-yt-EKl"/>
                             <constraint firstItem="HdW-Cm-4DE" firstAttribute="top" secondItem="OTb-iD-LLh" secondAttribute="bottom" constant="8" symbolic="YES" id="qh4-eB-1fc"/>
                             <constraint firstItem="84B-qy-e76" firstAttribute="top" secondItem="HdW-Cm-4DE" secondAttribute="bottom" constant="8" symbolic="YES" id="rfl-xk-vHZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xAH-k5-ork" secondAttribute="bottom" constant="69" id="yAm-7d-SHQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="greenLight" destination="84B-qy-e76" id="X0O-dT-QJL"/>
                         <outlet property="redLight" destination="OTb-iD-LLh" id="P2x-oU-Jeq"/>
-                        <outlet property="startButton" destination="7KT-0W-gae" id="EWj-oc-W4l"/>
+                        <outlet property="startButton" destination="xAH-k5-ork" id="BSf-ze-rm7"/>
                         <outlet property="yellowLight" destination="HdW-Cm-4DE" id="XWR-2T-VdV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.53435114503816" y="-49.295774647887328"/>
+            <point key="canvasLocation" x="129.76744186046511" y="-49.570815450643778"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -90,8 +98,8 @@
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
